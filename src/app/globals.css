@@ -13,6 +13,34 @@ $text-light-gray: #AAA; */
   font-style: normal;
 }
 
+@layer utilities {
+  .icon-white::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    /* makes it white */
+  }
+}
+
+/* For date input */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(200deg);
+  cursor: pointer;
+}
+
+/* For time input */
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(200deg);
+  cursor: pointer;
+}
+
+@layer base {
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: none;
+  }
+}
+
 html,
 body,
 :root {

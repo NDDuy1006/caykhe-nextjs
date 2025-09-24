@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import localFont from "next/font/local";
+import ToasterProvider from "./providers/ToasterProvider";
+import ClientOnly from "./components/ClientOnly";
+import Footer from "./components/Footer/Footer";
 
 const cubanoFont = localFont({
   src: "../../public/fonts/Cubano.ttf", // adjust path as needed
@@ -23,10 +26,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={cubanoFont.className}>
       <body>
+        <ClientOnly >
+          <ToasterProvider />
+        </ClientOnly>
         <Navbar />
         <div className="pb-20">
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );

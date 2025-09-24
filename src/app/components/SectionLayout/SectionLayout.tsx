@@ -1,7 +1,13 @@
+import { twMerge } from "tailwind-merge"
 
-const SectionLayout = ({ children }: { children: React.ReactNode }) => {
+interface IProps {
+  className?: string
+  children: React.ReactNode
+}
+
+const SectionLayout = ({ className, children }: IProps) => {
   return (
-    <div className="mt-5 px-5 md:mt-11 text-center flex flex-col items-center md:px-16">
+    <div className={twMerge(`${className && className} mt-5 px-5 md:mt-11 text-center flex flex-col items-center md:mx-11`)}>
       {children}
     </div>
   )
