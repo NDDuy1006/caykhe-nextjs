@@ -12,9 +12,9 @@ const Footer = () => {
         fill
         className="object-cover z-0"
       />
-      <div className=" pb-20 pt-20 px-6 md:px-0 md:pb-28 md:pt-64 md:max-w-[1280px] mx-auto flex flex-col gap-8 md:gap-0 md:flex-row justify-between">
-      <div className="flex md:hidden flex-col gap-5 z-1">
-          <h3 className="text-[46px] md:text-[64px] text-[#C8AC77] leading-16">
+      <div className="py-20 px-6 md:px-0 xl:pb-28 xl:pt-64 md:max-w-[1280px] mx-auto flex flex-col gap-8 md:gap-4 xl:gap-0 xl:flex-row justify-between">
+      <div className="flex xl:hidden flex-col gap-0 z-1">
+          <h3 className="text-[46px] md:text-[64px] text-[#C8AC77] leading-20">
             Cay Khe
           </h3>
           <p
@@ -44,7 +44,7 @@ const Footer = () => {
             0123456789
           </p>
         </div>
-        <div className="hidden md:flex flex-col gap-5 z-1">
+        <div className="hidden xl:flex flex-col gap-5 z-1">
           <h3 className="text-[64px] text-[#C8AC77] leading-16">
             Cay Khe
           </h3>

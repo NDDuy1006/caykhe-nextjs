@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const ReviewItem = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center md:w-[634px]">
+    <div className="flex flex-col md:flex-row items-center md:w-[780px]">
       <div className="w-[95px] md:w-[190px] flex-shrink-0">
         <img
           src="/images/person-1.jpg"
