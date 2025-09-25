@@ -6,7 +6,8 @@ const ReviewItem = () => {
     <div className="flex flex-col md:flex-row items-center md:w-[780px]">
       <div className="w-[95px] md:w-[190px] flex-shrink-0">
         <img
-          src="/images/person-1.jpg"
+          // src="/images/person-1.jpg"
+          src="/images/IMG_9930.jpeg"
           alt="guests"
           className="object-cover w-full h-auto"
         />
@@ -23,7 +24,7 @@ const ReviewItem = () => {
         <h3
           className="text-[20px] md:text-[32px] text-[#C8AC77]"
         >
-          Katie Becker
+          Oi Oi Oi
         </h3>
         <span className="">
           3 months ago
