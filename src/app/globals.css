@@ -20,16 +20,75 @@ $text-light-gray: #AAA; */
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+input {
+  background-color: transparent !important;
+}
+
+input {
+  color: #ccc;
+  /* or any color you like */
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+select {
+  color: #ccc;
+}
+
+/* override Chrome/Edge/Safari autofill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #ccc !important;
+  /* your custom text color */
+  caret-color: #ccc;
+  /* ensures the blinking cursor matches */
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: inherit;
+  /* keep text color from parent */
+  transition: background-color 5000s ease-in-out 0s;
+  /* trick to delay white flash */
+}
+
+/* optional for Firefox */
+input:-moz-autofill {
+  color: #ccc !important;
+  caret-color: #ccc;
+}
+
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+  -webkit-text-fill-color: #ccc !important;
+  /* text color */
+  caret-color: #ccc;
+  /* blinking cursor color (for editable selects) */
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  /* keep background transparent */
+}
+
 /* For date input */
 input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(1) sepia(1) saturate(5) hue-rotate(200deg);
-  cursor: pointer;
+  filter: invert(60%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
 }
 
 /* For time input */
 input[type="time"]::-webkit-calendar-picker-indicator {
-  filter: invert(1) sepia(1) saturate(5) hue-rotate(200deg);
-  cursor: pointer;
+  filter: invert(60%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
+}
+
+img,
+video {
+  max-width: unset;
 }
 
 @layer base {
@@ -47,4 +106,8 @@ body,
   height: 100%;
   background-color: #113426;
   color: #FFFFFFDE;
+}
+
+section {
+  scroll-margin-top: 75px;
 }

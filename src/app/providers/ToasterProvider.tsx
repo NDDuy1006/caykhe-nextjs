@@ -7,10 +7,7 @@ const ToasterProvider = () => {
     <Toaster
       toastOptions={{
         style: {
-          color: "#027A48",
           textAlign: "center",
-          background: "#ECFDF3",
-          border: "solid 1px #027A48",
           fontFamily: "sans-serif",
           textTransform: "uppercase"
         }

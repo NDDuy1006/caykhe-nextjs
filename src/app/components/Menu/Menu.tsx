@@ -12,7 +12,7 @@ import Image from 'next/image'
 
 const Menu = () => {
   return (
-    <SectionLayout>
+    <SectionLayout id="menu">
       <SectionHeader>
         <Label>
           menu that fits your palette

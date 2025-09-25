@@ -9,7 +9,7 @@ import Title from "../Title/Title"
 
 const About = () => {
   return (
-    <SectionLayout>
+    <SectionLayout id="about">
       <SectionHeader>
         <Label>
           Serving Quality

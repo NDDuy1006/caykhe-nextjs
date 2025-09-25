@@ -8,7 +8,7 @@ type IProps = {
 
 const MenuItem = ({title, desc, price}: IProps) => {
   return (
-    <div className="min-h-9 md:min-h-[62.59px] md:min-w-[532px] flex justify-between mb-4 border-b-[1px] border-b-gray-500">
+    <div className="min-h-9 md:min-h-[62.59px] lg:min-w-[280px] xl:min-w-[490px] flex justify-between mb-4 border-b-[1px] border-b-gray-500">
       <div className="flex flex-col gap-1">
         <h5
           style={{ fontFamily: 'sans-serif' }}

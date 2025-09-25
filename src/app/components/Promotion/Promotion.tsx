@@ -1,13 +1,12 @@
 import Label from "../Label/Label"
 import SectionHeader from "../SectionHeader/SectionHeader"
-import SectionLayout from "../SectionLayout/SectionLayout"
 import Title from "../Title/Title"
 import Image from "next/image"
 
 
 const Promotion = () => {
   return (
-    <div className="relative mt-[46px] w-screen h-[900px] text-center">
+    <div className="relative mt-[46px] w-screen h-[650px] md:h-[900px] text-center">
       <Image
         src="/images/happy-background.jpg"
         alt="Happy background"
