@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between gap-3 md:gap-0 px-6 md:px-16">
         <Logo />
         <NavLinkWrapper />
-        <CtaButton primary>
+        <CtaButton primary sectionId="reservation">
           Book a table
         </CtaButton>
       </div>

@@ -65,7 +65,6 @@ const Reservation = () => {
       .finally(() => {
         setIsLoading(false)
       })
-    
   }
 
   return (

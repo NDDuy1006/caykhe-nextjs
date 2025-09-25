@@ -22,10 +22,15 @@ const About = () => {
         </Desc>
       </SectionHeader>
       <ButtonWrapper>
-        <CtaButton primary>
+        <CtaButton
+          sectionId="reservation"
+          primary
+        >
           Book a table
         </CtaButton>
-        <CtaButton>
+        <CtaButton
+          sectionId="contact"
+        >
           Contact us
         </CtaButton>
       </ButtonWrapper>
