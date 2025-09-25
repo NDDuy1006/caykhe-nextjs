@@ -14,7 +14,7 @@ const Menu = () => {
   return (
     <SectionLayout id="menu">
       <SectionHeader>
-        <Label>
+        <Label icon>
           menu that fits your palette
         </Label>
         <Title>

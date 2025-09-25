@@ -3,6 +3,7 @@ import Footer from "./components/Footer/Footer";
 import Menu from "./components/Menu/Menu";
 import Promotion from "./components/Promotion/Promotion";
 import Reservation from "./components/Reservation/Reservation";
+import Review from "./components/Review/Review";
 import Slider from "./components/Slider/Slider";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Menu />
       <Reservation />
       <Promotion />
+      <Review />
     </div>
   );
 }

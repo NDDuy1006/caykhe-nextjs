@@ -83,7 +83,7 @@ const Reservation = () => {
       className="bg-[#445743] py-8 mt-6 md:mt-11 flex flex-col items-center mx-7 gap-4 md:gap-8 md:max-w-[690px] lg:max-w-[890px] xl:max-w-[1120px] md:mx-auto"
     >
       <SectionHeader>
-        <Label>
+        <Label icon>
           Reservation
         </Label>
         <Title>
@@ -108,17 +108,18 @@ const Reservation = () => {
         })}
         className="w-full px-8"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-4">
+        <div
+          style={{ fontFamily: "system-ui, Avenir, Helvetica, Arial, sans-serif" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-4"
+        >
           <div className="flex flex-col">
             <input
-              style={{ fontFamily: 'sans-serif' }}
               type="text"
               placeholder="Name"
               {...register("name", { required: "Invalid input" })}
               className="border border-[#CCC] bg-transparent p-3 text[#CCC] focus:outline-none"
             />
             <span
-              style={{ fontFamily: 'sans-serif' }}
               className="text-red-500 text-sm mt-1 min-h-[20px]"
             >
               {errors.name?.message as string}
@@ -126,14 +127,12 @@ const Reservation = () => {
           </div>
           <div className="flex flex-col">
             <input
-              style={{ fontFamily: 'sans-serif' }}
               type="text"
               placeholder="Phone number"
               {...register("phone", { required: "Invalid input" })}
               className="border border-[#CCC] bg-transparent p-3 text-[#CCC] focus:outline-none"
             />
             <span
-              style={{ fontFamily: 'sans-serif' }}
               className="text-red-500 text-sm mt-1 min-h-[20px]"
             >
               {errors.phone?.message as string}
@@ -141,7 +140,6 @@ const Reservation = () => {
           </div>
           <div className="flex flex-col">
             <input
-              style={{ fontFamily: 'sans-serif' }}
               type="email"
               placeholder="Email"
               {...register("email", { required: "Invalid input" })}
@@ -149,7 +147,6 @@ const Reservation = () => {
             text-[#CCC] focus:outline-none"
             />
             <span
-              style={{ fontFamily: 'sans-serif' }}
               className="text-red-500 text-sm mt-1 min-h-[20px]"
             >
               {errors.email?.message as string}
@@ -157,7 +154,6 @@ const Reservation = () => {
           </div>
           <div className="relative flex flex-col">
             <select
-              style={{ fontFamily: 'sans-serif' }}
               {...register("numberOfPeople", { required: "Invalid input" })}
               defaultValue="Number of People"
               className="border border-[#CCC] bg-transparent p-3 text-[#AAAAAA] focus:outline-none w-full"
@@ -182,7 +178,6 @@ const Reservation = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
             <span
-              style={{ fontFamily: 'sans-serif' }}
               className="text-red-500 text-sm mt-1 min-h-[20px]"
             >
               {errors.numberOfPeople?.message as string}
@@ -190,13 +185,11 @@ const Reservation = () => {
           </div>
           <div className="flex flex-col">
             <input
-              style={{ fontFamily: 'sans-serif' }}
               type="date"
               {...register("date", { required: "Invalid input" })}
               className="border border-[#CCC] bg-transparent p-3 text-[#AAAAAA] focus:outline-none"
             />
             <span
-              style={{ fontFamily: 'sans-serif' }}
               className="text-red-500 text-sm mt-1 min-h-[20px]"
             >
               {errors.date?.message as string}
@@ -204,13 +197,11 @@ const Reservation = () => {
           </div>
           <div className="flex flex-col">
             <input
-              style={{ fontFamily: 'sans-serif' }}
               type="time"
               {...register("time", { required: "Invalid input" })}
               className="border border-[#CCC] bg-transparent p-3 text-[#AAAAAA] focus:outline-none"
             />
             <span
-              style={{ fontFamily: 'sans-serif' }}
               className="text-red-500 text-sm mt-1 min-h-[20px]"
             >
               {errors.time?.message as string}

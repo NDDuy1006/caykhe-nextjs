@@ -11,7 +11,7 @@ const About = () => {
   return (
     <SectionLayout id="about">
       <SectionHeader>
-        <Label>
+        <Label icon>
           Serving Quality
         </Label>
         <Title>
