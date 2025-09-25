@@ -16,8 +16,6 @@ const Reservation = () => {
   const {
     register,
     handleSubmit,
-    setValue,
-    watch,
     formState: {
       errors,
     },
@@ -32,13 +30,6 @@ const Reservation = () => {
       date: ""
     }
   })
-
-  const name = watch("name")
-  const phone = watch("phone")
-  const email = watch("email")
-  const numberOfPeople = watch("numberOfPeople")
-  const time = watch("time")
-  const date = watch("date")
   
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true);
@@ -91,7 +82,7 @@ const Reservation = () => {
         </Title>
       </SectionHeader>
       <form
-        onSubmit={handleSubmit(onSubmit, (errors) => {
+        onSubmit={handleSubmit(onSubmit, () => {
           toast.error(
             <>
               Invalid input(s)<br />
