@@ -12,13 +12,13 @@ const Slider = () => {
     {
       imgSrc: "/images/img-placeholder.png",
       title: "Cay Khe",
-      desc: "CAY KHE in Oxford serves authentic Vietnamese dishesv in a warm, welcoming setting.",
+      desc: "Cay Khe in Oxford serves authentic Vietnamese dishes in a warm, welcoming setting.",
       buttonLabel: "Book a table"
     },
     {
       imgSrc: "/images/slider-item-1.jpg",
       title: "Cay Khe",
-      desc: "CAY KHE in Oxford serves authentic Vietnamese dishesv in a warm, welcoming setting.",
+      desc: "Cay Khe in Oxford serves authentic Vietnamese dishes in a warm, welcoming setting.",
       buttonLabel: "Book a table"
     },
   ]
@@ -39,7 +39,7 @@ const Slider = () => {
               <img
                 src={item.imgSrc}
                 alt="hero"
-                className="object-cover w-full h-[55vh md:h-[100vh]"
+                className="object-cover w-full h-[55vh] md:h-[100vh]"
               />
               <div
                 className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4"
@@ -51,7 +51,7 @@ const Slider = () => {
                   </h1>
                   <p
                     style={{ fontFamily: "system-ui, Avenir, Helvetica, Arial, sans-serif" }}
-                    className="my-4 max-w-2xl font-light text-[16px] md:text-[18px] text-white"
+                    className="my-4 md:max-w-2xl font-light text-[16px] md:text-[18px] text-white"
                   >
                     {item.desc}
                   </p>
