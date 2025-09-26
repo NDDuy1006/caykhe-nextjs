@@ -1,28 +1,42 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
-import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
+import { FieldError, UseFormRegister } from "react-hook-form";
+import { twMerge } from "tailwind-merge";
 
 interface IProps {
-  id: string;
-  type?: string;
-  disabled?: boolean;
-  required?: boolean;
+  name: string;
   placeholder: string;
+  register: UseFormRegister<any>;
+  rules?: object;
+  error?: string;
+  type: string;
 }
 
 const Input = ({
-  id,
+  name,
   type,
-  disabled,
-  placeholder
+  rules,
+  placeholder,
+  error,
+  register
 }: IProps) => {
   return (
-    <div className="w-full">
+    <div className="flex flex-col">
       <input
-        id={id}
-        disabled={disabled}
         placeholder={placeholder}
         type={type}
+        {...register(name, rules)}
+        className={twMerge(
+          `border bg-transparent p-3 text[#CCC] focus:outline-none, ${error ? "border-[#B42318]" : "border-[#CCC]"}`,
+        )}
       />
+      <span
+        className="text-red-500 text-sm mt-1 min-h-[20px]"
+      >
+        {error}
+      </span>
     </div>
   )
 }
+
+export default Input

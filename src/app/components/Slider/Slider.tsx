@@ -45,13 +45,13 @@ const Slider = () => {
                 className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4"
               >
                 <h1
-                  className="text-3xl md:text-5xl font-extrabold text-[#C8AC77] drop-shadow-lg"
+                  className="text-3xl md:text-6xl font-extrabold text-[#C8AC77] drop-shadow-lg"
                 >
                   {item.title}
                   </h1>
                   <p
                     style={{ fontFamily: "system-ui, Avenir, Helvetica, Arial, sans-serif" }}
-                    className="my-4 md:max-w-2xl font-light text-[16px] md:text-[18px] text-white"
+                    className="my-4 md:max-w-2xl font-light text-[16px] md:text-[20px] text-white"
                   >
                     {item.desc}
                   </p>

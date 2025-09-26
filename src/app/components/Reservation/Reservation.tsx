@@ -8,6 +8,7 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form"
 import { toast } from "react-hot-toast";
 import axios from "axios";
 import { twMerge } from "tailwind-merge"
+import Input from "./Input"
 
 
 const Reservation = () => {
@@ -102,46 +103,30 @@ const Reservation = () => {
           style={{ fontFamily: "system-ui, Avenir, Helvetica, Arial, sans-serif" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-4"
         >
-          <div className="flex flex-col">
-            <input
-              type="text"
-              placeholder="Name"
-              {...register("name", { required: "Invalid input" })}
-              className="border border-[#CCC] bg-transparent p-3 text[#CCC] focus:outline-none"
-            />
-            <span
-              className="text-red-500 text-sm mt-1 min-h-[20px]"
-            >
-              {errors.name?.message as string}
-            </span>
-          </div>
-          <div className="flex flex-col">
-            <input
-              type="text"
-              placeholder="Phone number"
-              {...register("phone", { required: "Invalid input" })}
-              className="border border-[#CCC] bg-transparent p-3 text-[#CCC] focus:outline-none"
-            />
-            <span
-              className="text-red-500 text-sm mt-1 min-h-[20px]"
-            >
-              {errors.phone?.message as string}
-            </span>
-          </div>
-          <div className="flex flex-col">
-            <input
-              type="email"
-              placeholder="Email"
-              {...register("email", { required: "Invalid input" })}
-              className="border border-[#CCC] bg-transparent p-3 
-            text-[#CCC] focus:outline-none"
-            />
-            <span
-              className="text-red-500 text-sm mt-1 min-h-[20px]"
-            >
-              {errors.email?.message as string}
-            </span>
-          </div>
+          <Input
+            type="text"
+            name="name"
+            placeholder="Name"
+            register={register}
+            rules={{ required: "Invalid input" }}
+            error={errors.name?.message as string}
+          />
+          <Input
+            type="text"
+            name="phone"
+            placeholder="Phone Number"
+            register={register}
+            rules={{ required: "Invalid input" }}
+            error={errors.phone?.message as string}
+          />
+          <Input
+            type="email"
+            name="email"
+            placeholder="Email"
+            register={register}
+            rules={{ required: "Invalid input" }}
+            error={errors.email?.message as string}
+          />
           <div className="relative flex flex-col">
             <select
               {...register("numberOfPeople", { required: "Invalid input" })}
@@ -173,30 +158,22 @@ const Reservation = () => {
               {errors.numberOfPeople?.message as string}
             </span>
           </div>
-          <div className="flex flex-col">
-            <input
-              type="date"
-              {...register("date", { required: "Invalid input" })}
-              className="border border-[#CCC] bg-transparent p-3 text-[#AAAAAA] focus:outline-none"
-            />
-            <span
-              className="text-red-500 text-sm mt-1 min-h-[20px]"
-            >
-              {errors.date?.message as string}
-            </span>
-          </div>
-          <div className="flex flex-col">
-            <input
-              type="time"
-              {...register("time", { required: "Invalid input" })}
-              className="border border-[#CCC] bg-transparent p-3 text-[#AAAAAA] focus:outline-none"
-            />
-            <span
-              className="text-red-500 text-sm mt-1 min-h-[20px]"
-            >
-              {errors.time?.message as string}
-            </span>
-          </div>
+          <Input
+            type="date"
+            name="date"
+            placeholder="Email"
+            register={register}
+            rules={{ required: "Invalid input" }}
+            error={errors.date?.message as string}
+          />
+          <Input
+            type="time"
+            name="time"
+            placeholder=""
+            register={register}
+            rules={{ required: "Invalid input" }}
+            error={errors.time?.message as string}
+          />
         </div>
         <div className="flex justify-center mt-3 md:mt-4">
           <button
