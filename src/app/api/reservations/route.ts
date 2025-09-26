@@ -41,7 +41,9 @@ export async function POST(
       to: "duynd1006.uk@gmail.com",
       subject: "New Table Reservation",
       html: `
+        <h2>Oi Bạn Oi</h2>
         <h2>Khách book bàn nè</h2>
+        <h2>Gọi khách chốt đơn phát bạn Oi </h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
