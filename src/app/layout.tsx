@@ -29,7 +29,6 @@ export default function RootLayout({
         <ClientOnly >
           <ToasterProvider />
         </ClientOnly>
-        <Navbar />
         <div className="pb-20">
           {children}
         </div>

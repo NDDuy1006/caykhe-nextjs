@@ -1,10 +1,17 @@
+import { twMerge } from "tailwind-merge"
 import CtaButton from "../CtaButton/CtaButton"
 import Logo from "./Logo"
 import NavLinkWrapper from "./NavLinkWrapper"
 
-const Navbar = () => {
+interface IProps {
+  scrolled: boolean
+}
+
+const Navbar = ({ scrolled }: IProps) => {
   return (
-    <div className="fixed w-full bg-[#113426] z-10 shadow-md py-4">
+    <div className={twMerge(
+      `fixed w-full z-10 shadow-md transition-all duration-400 ease-in-out py-4 ${scrolled ? "bg-[#145C43]" : "bg-[#113426]"}`
+    )}>
       <div className="flex items-center justify-between gap-3 md:gap-0 px-6 md:px-16">
         <Logo />
         <NavLinkWrapper />
@@ -17,3 +24,7 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+// 
+
+// bg-[#145C43]

@@ -5,9 +5,11 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import CtaButton from "../CtaButton/CtaButton";
+import { forwardRef } from "react";
 
 
-const Slider = () => {
+// eslint-disable-next-line react/display-name
+const Slider = forwardRef<HTMLDivElement>((_, ref) => {
   const slides = [
     {
       imgSrc: "/images/img-placeholder.png",
@@ -23,8 +25,9 @@ const Slider = () => {
     },
   ]
 
+
   return (
-    <section id="home" className="mx-auto">
+    <section ref={ref} id="home" className="mx-auto">
       <Swiper
         modules={[Autoplay]}
         slidesPerView={1}
@@ -69,6 +72,7 @@ const Slider = () => {
       </Swiper>
     </section>
   )
-}
+})
 
 export default Slider
+
