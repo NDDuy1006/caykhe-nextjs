@@ -27,7 +27,7 @@ const Input = ({
         type={type}
         {...register(name, rules)}
         className={twMerge(
-          `border bg-transparent p-3 text[#CCC] focus:outline-none, ${error ? "border-[#B42318]" : "border-[#CCC]"}`,
+          `border bg-transparent p-3 text-[#CCC] focus:outline-none appearance-none ${error ? "border-[#B42318]" : "border-[#CCC]"}`,
         )}
       />
       <span

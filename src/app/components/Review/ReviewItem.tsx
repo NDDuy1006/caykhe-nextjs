@@ -6,7 +6,7 @@ const ReviewItem = () => {
       <div className="w-[95px] md:w-[190px] flex-shrink-0">
         <img
           // src="/images/person-1.jpg"
-          src="/images/IMG_9930.jpeg"
+          src="/images/rage-comic-1.jpeg"
           alt="guests"
           className="object-cover w-full h-auto"
         />
