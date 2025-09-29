@@ -107,6 +107,7 @@ const Reservation = () => {
             type="text"
             name="name"
             placeholder="Name"
+            disabled={isLoading}
             register={register}
             rules={{ required: "Invalid input" }}
             error={errors.name?.message as string}
@@ -115,6 +116,7 @@ const Reservation = () => {
             type="text"
             name="phone"
             placeholder="Phone Number"
+            disabled={isLoading}
             register={register}
             rules={{ required: "Invalid input" }}
             error={errors.phone?.message as string}
@@ -123,6 +125,7 @@ const Reservation = () => {
             type="email"
             name="email"
             placeholder="Email"
+            disabled={isLoading}
             register={register}
             rules={{ required: "Invalid input" }}
             error={errors.email?.message as string}
@@ -130,6 +133,7 @@ const Reservation = () => {
           <div className="relative flex flex-col">
             <select
               {...register("numberOfPeople", { required: "Invalid input" })}
+              disabled={isLoading}
               defaultValue="Number of People"
               className="border border-[#CCC] bg-transparent p-3 text-[#AAAAAA] focus:outline-none w-full"
             >
@@ -161,7 +165,8 @@ const Reservation = () => {
           <Input
             type="date"
             name="date"
-            placeholder="Email"
+            placeholder="Date"
+            disabled={isLoading}
             register={register}
             rules={{ required: "Invalid input" }}
             error={errors.date?.message as string}
@@ -169,7 +174,8 @@ const Reservation = () => {
           <Input
             type="time"
             name="time"
-            placeholder=""
+            placeholder="--:--"
+            disabled={isLoading}
             register={register}
             rules={{ required: "Invalid input" }}
             error={errors.time?.message as string}

@@ -10,6 +10,7 @@ interface IProps {
   rules?: object;
   error?: string;
   type: string;
+  disabled: boolean
 }
 
 const Input = ({
@@ -18,6 +19,7 @@ const Input = ({
   rules,
   placeholder,
   error,
+  disabled,
   register
 }: IProps) => {
   return (
@@ -25,9 +27,10 @@ const Input = ({
       <input
         placeholder={placeholder}
         type={type}
+        disabled={disabled}
         {...register(name, rules)}
         className={twMerge(
-          `border bg-transparent p-3 text-[#CCC] focus:outline-none appearance-none ${error ? "border-[#B42318]" : "border-[#CCC]"}`,
+          `border bg-transparent p-3 text-[#CCC] focus:outline-none appearance-none ${error ? "border-[#B42318]" : disabled ? "border-[#a1a1a1]" : "border-[#CCC]"}`,
         )}
       />
       <span
